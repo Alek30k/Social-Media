@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   return (
@@ -55,7 +56,9 @@ const Navbar = () => {
         </div>
       </div>
       {/* RIGHT */}
-      <div className=""></div>
+      <div className="w-[30%] flex items-center gap-4 xl:gap-8 justify-end">
+        <MobileMenu />
+      </div>
     </div>
   );
 };
