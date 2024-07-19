@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import MobileMenu from "./MobileMenu";
-import { ClerkLoaded, ClerkLoading, SignedIn, SignedOut } from "@clerk/nextjs";
+import {
+  ClerkLoaded,
+  ClerkLoading,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -72,7 +78,7 @@ const Navbar = () => {
             <div className="cursor-pointer">
               <Image src="/notifications.png" alt="" width={20} height={20} />
             </div>
-            {/* <UserButton /> */}
+            <UserButton />
           </SignedIn>
           <SignedOut>
             <div className="flex items-center gap-2 text-sm">
