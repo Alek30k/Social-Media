@@ -3,7 +3,10 @@ const Post = () => {
     <div className="flex flex-col gap-4">
       {/* USER */}
       <div className=""></div>
-      Post
+      {/* DESC */}
+      <div className=""></div>
+      {/* INTERACTION */}
+      <div className=""></div>
     </div>
   );
 };
