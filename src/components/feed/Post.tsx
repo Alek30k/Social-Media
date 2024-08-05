@@ -28,7 +28,7 @@ const Post = () => {
         {/* {post.img && ( */}
         <div className="w-full min-h-96 relative">
           <Image
-            src={"/noAvatar.png"}
+            src="https://www.noruegatours.com/wp-content/uploads/2021/12/noruega-en-febrero.png"
             fill
             className="object-cover rounded-md"
             alt=""
