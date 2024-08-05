@@ -39,7 +39,6 @@ const CommentList = () => {
       )}
       <div className="">
         {/* COMMENT */}
-
         <div className="flex gap-4 justify-between mt-6">
           {/* AVATAR */}
           <Image
