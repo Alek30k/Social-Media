@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FriendRequestList from "./FriendRequestList";
 
 const FriendRequests = async () => {
   return (
@@ -11,7 +12,7 @@ const FriendRequests = async () => {
         </Link>
       </div>
       {/* USER */}
-      FriendRequestList
+      <FriendRequestList />
     </div>
   );
 };
