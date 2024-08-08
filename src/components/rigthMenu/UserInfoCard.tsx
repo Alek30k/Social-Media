@@ -11,7 +11,7 @@ const UserInfoCard = async ({ userId }: { userId: string }) => {
       {/* TOP */}
       <div className="flex justify-between items-center font-medium">
         <span className="text-gray-500">User Information</span>
-        actualizar usuario ) : (
+
         <Link href="/" className="text-blue-500 text-xs">
           See all
         </Link>
@@ -19,45 +19,44 @@ const UserInfoCard = async ({ userId }: { userId: string }) => {
       {/* BOTTOM */}
       <div className="flex flex-col gap-4 text-gray-500">
         <div className="flex items-center gap-2">
-          <span className="text-xl text-black">ale</span>
-          <span className="text-sm">@user.username</span>
+          <span className="text-xl text-black">Ale Cabrera</span>
+          <span className="text-sm">@Alek30k</span>
         </div>
-        description && <p>description</p>
-        city &&
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus
+          quibusdam sapiente distinctio commodi error.
+        </p>
         <div className="flex items-center gap-2">
           <Image src="/map.png" alt="" width={16} height={16} />
           <span>
-            Living in <b>user.city</b>
+            Living in <b>Formosa</b>
           </span>
         </div>
-        user.school &&
         <div className="flex items-center gap-2">
           <Image src="/school.png" alt="" width={16} height={16} />
           <span>
-            Went to <b>user.school</b>
+            Went to <b>Harvard</b>
           </span>
         </div>
-        user.work &&
         <div className="flex items-center gap-2">
           <Image src="/work.png" alt="" width={16} height={16} />
           <span>
-            Works at <b>user.work</b>
+            Works at <b>Tesla</b>
           </span>
-          <div className="flex items-center justify-between">
-            user.website &&
-            <div className="flex gap-1 items-center">
-              <Image src="/link.png" alt="" width={16} height={16} />
-              <Link href="user.website" className="text-blue-500 font-medium">
-                user.website
-              </Link>
-            </div>
-            <div className="flex gap-1 items-center">
-              <Image src="/date.png" alt="" width={16} height={16} />
-              <span>Joined </span>
-            </div>
-          </div>
-          UserInfoCardInteraction
         </div>
+        <div className="flex items-center justify-between">
+          <div className="flex gap-1 items-center">
+            <Image src="/link.png" alt="" width={16} height={16} />
+            <Link href="user.website" className="text-blue-500 font-medium">
+              mywebsite.com
+            </Link>
+          </div>
+          <div className="flex gap-1 items-center">
+            <Image src="/date.png" alt="" width={16} height={16} />
+            <span>Joined November 2024</span>
+          </div>
+        </div>
+        UserInfoCardInteraction
       </div>
     </div>
   );
