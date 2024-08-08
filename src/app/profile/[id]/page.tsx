@@ -20,14 +20,14 @@ const ProfilePage = async () => {
                 className="rounded-md object-cover"
               />
               <Image
-                src="/noAvatar.png"
+                src="https://images.pexels.com/photos/17410093/pexels-photo-17410093/free-photo-of-playa-vacaciones-mujer-cara.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                 alt=""
                 width={128}
                 height={128}
                 className="w-32 h-32 rounded-full absolute left-0 right-0 m-auto -bottom-16 ring-4 ring-white object-cover"
               />
             </div>
-            <h1 className="mt-20 mb-4 text-2xl font-medium">Jane</h1>
+            <h1 className="mt-20 mb-4 text-2xl font-medium">Jane Russell</h1>
             <div className="flex items-center justify-center gap-12 mb-4">
               <div className="flex flex-col items-center">
                 <span className="font-medium">200</span>

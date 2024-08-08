@@ -8,17 +8,17 @@ const Post = () => {
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
           <Image
-            src={"/noAvatar.png"}
+            src="https://images.pexels.com/photos/17410093/pexels-photo-17410093/free-photo-of-playa-vacaciones-mujer-cara.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
             width={40}
             height={40}
             alt=""
-            className="w-10 h-10 rounded-full"
+            className="w-10 h-10 rounded-full object-cover"
           />
           <span className="font-medium">
             {/* {post.user.name && post.user.surname
               ? post.user.name + " " + post.user.surname
               : post.user.username} */}
-            Ale Cabrera
+            Jane Russell
           </span>
         </div>
         <Image src={"/more.png"} width={16} height={16} alt="" />
