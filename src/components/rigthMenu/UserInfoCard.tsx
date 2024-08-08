@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const UserInfoCard = async () => {
+const UserInfoCard = async ({ userId }: { userId: string }) => {
   let isUserBlocked = false;
   let isFollowing = false;
   let isFollowingSent = false;
