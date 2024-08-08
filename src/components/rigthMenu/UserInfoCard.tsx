@@ -56,7 +56,16 @@ const UserInfoCard = async ({ userId }: { userId: string }) => {
             <span>Joined November 2024</span>
           </div>
         </div>
-        UserInfoCardInteraction
+        <form>
+          <button className="w-full bg-blue-500 text-white text-sm rounded-md p-2">
+            Follow
+          </button>
+        </form>
+        <form className="self-end ">
+          <span className="text-red-400 text-xs cursor-pointer">
+            Block User
+          </span>
+        </form>
       </div>
     </div>
   );

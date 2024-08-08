@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const UserMediaCard = ({ userId }: { userId: string }) => {
@@ -13,13 +14,68 @@ const UserMediaCard = ({ userId }: { userId: string }) => {
       {/* BOTTOM */}
       <div className="flex gap-4 justify-between flex-wrap">
         <div className="relative w-1/5 h-24">
-          {/* <Image
-                  src={post.img!}
-                  alt=""
-                  fill
-                  className="object-cover rounded-md"
-                /> */}
-          image
+          <Image
+            src="https://images.pexels.com/photos/27240568/pexels-photo-27240568/free-photo-of-nieve-nevar-naturaleza-gente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            fill
+            className="object-cover rounded-md"
+          />
+        </div>
+        <div className="relative w-1/5 h-24">
+          <Image
+            src="https://images.pexels.com/photos/27240568/pexels-photo-27240568/free-photo-of-nieve-nevar-naturaleza-gente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            fill
+            className="object-cover rounded-md"
+          />
+        </div>
+        <div className="relative w-1/5 h-24">
+          <Image
+            src="https://images.pexels.com/photos/27240568/pexels-photo-27240568/free-photo-of-nieve-nevar-naturaleza-gente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            fill
+            className="object-cover rounded-md"
+          />
+        </div>
+        <div className="relative w-1/5 h-24">
+          <Image
+            src="https://images.pexels.com/photos/27240568/pexels-photo-27240568/free-photo-of-nieve-nevar-naturaleza-gente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            fill
+            className="object-cover rounded-md"
+          />
+        </div>
+        <div className="relative w-1/5 h-24">
+          <Image
+            src="https://images.pexels.com/photos/27240568/pexels-photo-27240568/free-photo-of-nieve-nevar-naturaleza-gente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            fill
+            className="object-cover rounded-md"
+          />
+        </div>
+        <div className="relative w-1/5 h-24">
+          <Image
+            src="https://images.pexels.com/photos/27240568/pexels-photo-27240568/free-photo-of-nieve-nevar-naturaleza-gente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            fill
+            className="object-cover rounded-md"
+          />
+        </div>
+        <div className="relative w-1/5 h-24">
+          <Image
+            src="https://images.pexels.com/photos/27240568/pexels-photo-27240568/free-photo-of-nieve-nevar-naturaleza-gente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            fill
+            className="object-cover rounded-md"
+          />
+        </div>
+        <div className="relative w-1/5 h-24">
+          <Image
+            src="https://images.pexels.com/photos/27240568/pexels-photo-27240568/free-photo-of-nieve-nevar-naturaleza-gente.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+            fill
+            className="object-cover rounded-md"
+          />
         </div>
       </div>
     </div>
