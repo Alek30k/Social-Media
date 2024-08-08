@@ -13,7 +13,7 @@ const ProfileCard = async () => {
           className="rounded-md object-cover"
         />
         <Image
-          src="/noAvatar.png"
+          src="https://images.pexels.com/photos/17410093/pexels-photo-17410093/free-photo-of-playa-vacaciones-mujer-cara.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
           alt=""
           width={48}
           height={48}
@@ -21,25 +21,25 @@ const ProfileCard = async () => {
         />
       </div>
       <div className="h-20 flex flex-col gap-2 items-center">
-        <span className="font-semibold">Ale Cabrera</span>
+        <span className="font-semibold">Jane Russell</span>
         <div className="flex items-center gap-4">
           <div className="flex">
             <Image
-              src="https://images.pexels.com/photos/19578755/pexels-photo-19578755/free-photo-of-woman-watching-birds-and-landscape.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+              src="https://images.pexels.com/photos/27596665/pexels-photo-27596665/free-photo-of-ciudad-moda-gafas-de-sol-gente.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
               alt=""
               width={12}
               height={12}
               className="rounded-full object-cover w-3 h-3"
             />
             <Image
-              src="https://images.pexels.com/photos/19578755/pexels-photo-19578755/free-photo-of-woman-watching-birds-and-landscape.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+              src="https://images.pexels.com/photos/27596665/pexels-photo-27596665/free-photo-of-ciudad-moda-gafas-de-sol-gente.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
               alt=""
               width={12}
               height={12}
               className="rounded-full object-cover w-3 h-3"
             />
             <Image
-              src="https://images.pexels.com/photos/19578755/pexels-photo-19578755/free-photo-of-woman-watching-birds-and-landscape.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load"
+              src="https://images.pexels.com/photos/27596665/pexels-photo-27596665/free-photo-of-ciudad-moda-gafas-de-sol-gente.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
               alt=""
               width={12}
               height={12}
