@@ -23,6 +23,7 @@ model User {
   website                String?
   createdAt              DateTime        @default(now())
   posts Post[]
+  comments Comment[]
   likes Like[]
 }
 
@@ -34,6 +35,19 @@ model Post {
   updatedAt DateTime  @updatedAt
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId String @db.ObjectId
+  comments Comment[]
+  likes   Like[]
+}
+
+model Comment {
+  id String  @id @default(auto()) @map("_id") @db.ObjectId
+  desc      String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+   userId String @db.ObjectId
+  post      Post     @relation(fields: [postId], references: [id], onDelete: Cascade)
+   postId String @db.ObjectId
+   likes Like[]
 }
 
 model Like {
@@ -41,5 +55,16 @@ model Like {
   createdAt DateTime @default(now())
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
    userId String @db.ObjectId
+   post Post @relation(fields: [postId], references: [id], onDelete: Cascade)
+   postId String @db.ObjectId
+   Comment   Comment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  commentId String @db.ObjectId
 
 }
+
+model Follower {
+  id String  @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt   DateTime @default(now())
+  
+}
+
