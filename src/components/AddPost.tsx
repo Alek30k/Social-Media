@@ -1,27 +1,43 @@
 "use client";
 
-import { useUser } from "@clerk/nextjs";
-// import { auth } from "@clerk/nextjs/server";
+import { addPost } from "@/lib/actions";
+// import prisma from "@/lib/client";
+// import { useUser } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 // import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
-import { useState } from "react";
+// import { useState } from "react";
 // import AddPostButton from "./AddPostButton";
 // import { addPost } from "@/lib/actions";
 
 const AddPost = () => {
-  const { user, isLoaded } = useUser();
-  const [desc, setDesc] = useState("");
-  const [img, setImg] = useState<any>();
+  // const { user, isLoaded } = useUser();
+  // const [desc, setDesc] = useState("");
+  // const [img, setImg] = useState<any>();
 
-  if (!isLoaded) {
-    return "Loading...";
-  }
+  // if (!isLoaded) {
+  //   return "Loading...";
+  // }
+
+  const testAction = async (formData: FormData) => {
+    // const desc = formData.get("desc") as string;
+    // try {
+    //   prisma.post.create({
+    //     data:{
+    //       userId: user.id,
+    //       desc:desc
+    //     }
+    //   })
+    // } catch (error) {
+    //   console.log(error);
+    // }
+  };
 
   return (
     <div className="p-4 bg-white shadow-md rounded-lg flex gap-4 justify-between text-sm">
       {/* AVATAR */}
       <Image
-        src={user?.imageUrl || "/noAvatar.png"}
+        src="/noAvatar.png"
         alt=""
         width={48}
         height={48}
@@ -30,12 +46,12 @@ const AddPost = () => {
       {/* POST */}
       <div className="flex-1">
         {/* TEXT INPUT */}
-        <form className="flex gap-4">
+        <form action={addPost} className="flex gap-4">
           <textarea
             placeholder="What's on your mind?"
             className="flex-1 bg-slate-100 rounded-lg p-2"
             name="desc"
-            onChange={(e) => setDesc(e.target.value)}
+            // onChange={(e) => setDesc(e.target.value)}
           ></textarea>
           <div className="">
             <Image
