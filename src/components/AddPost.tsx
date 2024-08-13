@@ -1,9 +1,7 @@
 "use client";
 
-import { addPost } from "@/lib/actions";
-// import prisma from "@/lib/client";
-// import { useUser } from "@clerk/nextjs";
-import { auth } from "@clerk/nextjs/server";
+import prisma from "@/lib/client";
+import { useUser } from "@clerk/nextjs";
 // import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 // import { useState } from "react";
@@ -11,7 +9,7 @@ import Image from "next/image";
 // import { addPost } from "@/lib/actions";
 
 const AddPost = () => {
-  // const { user, isLoaded } = useUser();
+  const { user, isLoaded } = useUser();
   // const [desc, setDesc] = useState("");
   // const [img, setImg] = useState<any>();
 
@@ -20,17 +18,17 @@ const AddPost = () => {
   // }
 
   const testAction = async (formData: FormData) => {
-    // const desc = formData.get("desc") as string;
-    // try {
-    //   prisma.post.create({
-    //     data:{
-    //       userId: user.id,
-    //       desc:desc
-    //     }
-    //   })
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    const desc = formData.get("desc") as string;
+    try {
+      prisma.post.create({
+        data: {
+          userId: "",
+          desc: desc,
+        },
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -46,7 +44,7 @@ const AddPost = () => {
       {/* POST */}
       <div className="flex-1">
         {/* TEXT INPUT */}
-        <form action={addPost} className="flex gap-4">
+        <form action={testAction} className="flex gap-4">
           <textarea
             placeholder="What's on your mind?"
             className="flex-1 bg-slate-100 rounded-lg p-2"
