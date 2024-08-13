@@ -1,7 +1,6 @@
 "use server";
 
 import prisma from "@/lib/client";
-import { useUser } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 
@@ -16,16 +15,18 @@ const AddPost = () => {
     if (!userId) return;
 
     const desc = formData.get("desc") as string;
+
+    console.log("esto es desc ", desc);
     try {
       const resp = await prisma.post.create({
         data: {
-          userId: userId,
-          desc: desc,
+          userId,
+          desc,
         },
       });
-      console.log(resp);
+      console.log("post creado", resp);
     } catch (error) {
-      console.log(error);
+      console.log(">>>>>", error);
     }
   };
 
