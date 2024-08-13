@@ -1,31 +1,29 @@
-"use client";
+"use server";
 
 import prisma from "@/lib/client";
 import { useUser } from "@clerk/nextjs";
-// import { CldUploadWidget } from "next-cloudinary";
+import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
-// import { useState } from "react";
-// import AddPostButton from "./AddPostButton";
-// import { addPost } from "@/lib/actions";
 
 const AddPost = () => {
-  const { user, isLoaded } = useUser();
-  // const [desc, setDesc] = useState("");
-  // const [img, setImg] = useState<any>();
+  const { userId } = auth();
 
-  // if (!isLoaded) {
-  //   return "Loading...";
-  // }
+  console.log(userId);
 
   const testAction = async (formData: FormData) => {
+    "use server";
+
+    if (!userId) return;
+
     const desc = formData.get("desc") as string;
     try {
-      prisma.post.create({
+      const resp = await prisma.post.create({
         data: {
-          userId: "",
+          userId: userId,
           desc: desc,
         },
       });
+      console.log(resp);
     } catch (error) {
       console.log(error);
     }
@@ -61,6 +59,7 @@ const AddPost = () => {
             />
             {/* <AddPostButton /> */}
           </div>
+          <button>send</button>
         </form>
         {/* POST OPTIONS */}
         <div className="flex items-center gap-4 mt-4 text-gray-400 flex-wrap">
