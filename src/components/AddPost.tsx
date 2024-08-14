@@ -12,11 +12,13 @@ const AddPost = () => {
   const testAction = async (formData: FormData) => {
     "use server";
 
-    if (!userId) return;
-
     const desc = formData.get("desc") as string;
 
     console.log("esto es desc ", desc);
+
+    const { userId } = auth();
+
+    if (!userId) throw new Error("User is not authenticated!");
     try {
       const resp = await prisma.post.create({
         data: {
