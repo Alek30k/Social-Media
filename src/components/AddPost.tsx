@@ -14,8 +14,6 @@ const AddPost = () => {
 
     const desc = formData.get("desc") as string;
 
-    console.log("esto es desc ", desc);
-
     const { userId } = auth();
 
     if (!userId) throw new Error("User is not authenticated!");
