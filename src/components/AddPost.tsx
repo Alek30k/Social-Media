@@ -1,34 +1,35 @@
-"use server";
+"use client";
 
-import prisma from "@/lib/client";
-import { auth } from "@clerk/nextjs/server";
+import { addPost } from "@/lib/actions";
+// import prisma from "@/lib/client";
+// import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 
 const AddPost = () => {
-  const { userId } = auth();
+  // const { userId } = auth();
 
-  console.log(userId);
+  // console.log(userId);
 
-  const testAction = async (formData: FormData) => {
-    "use server";
+  // const testAction = async (formData: FormData) => {
+  //   "use server";
 
-    const desc = formData.get("desc") as string;
+  //   const desc = formData.get("desc") as string;
 
-    const { userId } = auth();
+  //   const { userId } = auth();
 
-    if (!userId) throw new Error("User is not authenticated!");
-    try {
-      const resp = await prisma.post.create({
-        data: {
-          userId,
-          desc,
-        },
-      });
-      console.log("post creado", resp);
-    } catch (error) {
-      console.log(">>>>>", error);
-    }
-  };
+  //   if (!userId) throw new Error("User is not authenticated!");
+  //   try {
+  //     const resp = await prisma.post.create({
+  //       data: {
+  //         userId,
+  //         desc,
+  //       },
+  //     });
+  //     console.log("post creado", resp);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <div className="p-4 bg-white shadow-md rounded-lg flex gap-4 justify-between text-sm">
@@ -43,12 +44,11 @@ const AddPost = () => {
       {/* POST */}
       <div className="flex-1">
         {/* TEXT INPUT */}
-        <form action={testAction} className="flex gap-4">
+        <form action={addPost} className="flex gap-4">
           <textarea
             placeholder="What's on your mind?"
             className="flex-1 bg-slate-100 rounded-lg p-2"
             name="desc"
-            // onChange={(e) => setDesc(e.target.value)}
           ></textarea>
           <div className="">
             <Image
@@ -58,31 +58,11 @@ const AddPost = () => {
               height={20}
               className="w-5 h-5 cursor-pointer self-end"
             />
-            {/* <AddPostButton /> */}
           </div>
           <button>send</button>
         </form>
         {/* POST OPTIONS */}
         <div className="flex items-center gap-4 mt-4 text-gray-400 flex-wrap">
-          {/* <CldUploadWidget
-            uploadPreset="social"
-            onSuccess={(result, { widget }) => {
-              setImg(result.info);
-              widget.close();
-            }}
-          >
-            {({ open }) => {
-              return (
-                <div
-                  className="flex items-center gap-2 cursor-pointer"
-                  onClick={() => open()}
-                >
-                  <Image src="/addimage.png" alt="" width={20} height={20} />
-                  Photo
-                </div>
-              );
-            }}
-          </CldUploadWidget> */}
           <div className="flex items-center gap-2 cursor-pointer">
             <Image src="/addimage.png" alt="" width={20} height={20} />
             Photo
