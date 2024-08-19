@@ -34,13 +34,13 @@ const AddPost = () => {
   return (
     <div className="p-4 bg-white shadow-md rounded-lg flex gap-4 justify-between text-sm">
       {/* AVATAR */}
-      <Image
+      {/* <Image
         src="/noAvatar.png"
         alt=""
         width={48}
         height={48}
         className="w-12 h-12 object-cover rounded-full"
-      />
+      /> */}
       {/* POST */}
       <div className="flex-1">
         {/* TEXT INPUT */}
