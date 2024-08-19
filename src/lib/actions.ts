@@ -14,15 +14,15 @@ export const addPost = async (formData: FormData) => {
   const { userId } = auth();
 
   if (!userId) throw new Error("User is not authenticated!");
-  //   try {
-  //     const resp = await prisma.post.create({
-  //       data: {
-  //         userId,
-  //         desc,
-  //       },
-  //     });
-  //     console.log("post creado", resp);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
+  try {
+    const resp = await prisma.post.create({
+      data: {
+        userId,
+        desc,
+      },
+    });
+    console.log("post creado", resp);
+  } catch (error) {
+    console.log(error);
+  }
 };
