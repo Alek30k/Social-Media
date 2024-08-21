@@ -1,14 +1,14 @@
-"use server";
+"use client";
 
 import { addPost } from "@/lib/actions";
 // import prisma from "@/lib/client";
-import { auth } from "@clerk/nextjs/server";
+// import { auth } from "@clerk/nextjs/server";
 import Image from "next/image";
 
 const AddPost = () => {
-  const { userId } = auth();
+  // const { userId } = auth();
 
-  console.log(userId);
+  // console.log(userId);
 
   // const testAction = async (formData: FormData) => {
   //   "use server";
