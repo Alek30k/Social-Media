@@ -10,7 +10,6 @@ console.log(userId);
 export const addPost = async (formData: FormData) => {
   const desc = formData.get("desc") as string;
 
-  console.log(desc);
   const { userId } = auth();
 
   if (!userId) throw new Error("User is not authenticated!");
