@@ -2,6 +2,7 @@
 
 import { auth } from "@clerk/nextjs/server";
 import prisma from "./client";
+import { ObjectId } from "bson";
 
 const { userId } = auth();
 
@@ -12,11 +13,16 @@ export const addPost = async (formData: FormData) => {
 
   const { userId } = auth();
 
+  // if (!ObjectId.isValid(userId)) {
+  //   throw new Error('Invalid user ID format!');
+  // }
+  const userObjectId = new ObjectId(userId);
+
   if (!userId) throw new Error("User is not authenticated!");
   try {
     const resp = await prisma.post.create({
       data: {
-        userId,
+        userId: userObjectId,
         desc,
       },
     });
